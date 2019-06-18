@@ -1,2 +1,4 @@
 dist/
 *.lkshs
+lph.cabal
+.stack-work

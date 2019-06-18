@@ -5,6 +5,8 @@ import Text.PrettyPrint.HughesPJ hiding (parens)
 import Common
 import Lambda.AST
 
+import Prelude hiding ((<>))
+
 tPrint :: Int -> Type -> Doc
 tPrint p (TFree (Global s))  =  text s
 tPrint p (Fun ty ty')        =  parensIf (p > 0) (sep [tPrint 0 ty <> text " ->", nest 2 (tPrint 0 ty')])

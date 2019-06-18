@@ -5,6 +5,8 @@ import Text.PrettyPrint.HughesPJ hiding (parens)
 import Common
 import LambdaPi.AST
 
+import Prelude hiding ((<>))
+
 iPrint_ :: Int -> Int -> ITerm_ -> Doc
 iPrint_ p ii (Ann_ c ty)       =  parensIf (p > 1) (cPrint_ 2 ii c <> text " :: " <> cPrint_ 0 ii ty)
 iPrint_ p ii Star_             =  text "*"

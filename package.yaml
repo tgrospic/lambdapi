@@ -1,0 +1,31 @@
+name:                lph
+version:             0.1.0
+github:              "tgrospic/lambdapi"
+license:             MIT
+author:              "Ilya Klyuchnikov"
+maintainer:          "Ilya Klyuchnikov"
+
+description:         Dependently typed lambda calculus
+
+dependencies:
+- base >=4.9.1.0
+- mtl >=2.2.1
+- parsec >=3.1.11
+- pretty >=1.1.3.5
+- readline >=1.0.3.0
+
+library:
+  source-dirs: .
+
+executables:
+  lambda-exe:
+    main:                Lambda/Main.hs
+    source-dirs:         .
+    ghc-options:
+    - -main-is Lambda.Main
+    
+  lambdapi-exe:
+    main:                LambdaPi/Main.hs
+    source-dirs:         .
+    ghc-options:
+    - -main-is LambdaPi.Main

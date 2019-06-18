@@ -9,6 +9,8 @@ import Text.ParserCombinators.Parsec.Language
 import Common
 import Lambda.AST
 
+import Prelude hiding ((<>))
+
 simplyTyped = makeTokenParser (haskellStyle { identStart = letter <|> P.char '_',
                                               reservedNames = ["let", "assume", "putStrLn"] })
 parseBindings :: CharParser () ([String], [Info])

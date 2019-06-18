@@ -1,6 +1,6 @@
 module REPL where
 
-import Prelude hiding (print)
+import Prelude hiding (print, (<>))
 import Control.Monad.Except
 import Data.List
 import Data.Char
@@ -13,7 +13,6 @@ import Text.ParserCombinators.Parsec.Language
 import System.Console.Readline
 import System.IO hiding (print)
 import System.IO.Error
-
 
 import Common
 
